@@ -1,0 +1,41 @@
+.header-nav {
+  padding: 15px 0;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  color: var(--header-gray);
+
+  a {
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: var(--header-blue);
+  }
+
+  .highlight {
+    color: var(--header-highlight);
+    font-weight: 600;
+  }
+}
+
+.nav-item-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 1024px) {
+  .nav-list {
+    gap: 20px;
+    padding-bottom: 10px;
+    overflow-x: auto;
+  }
+}

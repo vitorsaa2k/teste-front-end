@@ -1,0 +1,31 @@
+.site-header,
+.site-header *,
+.site-header *::before,
+.site-header *::after {
+  box-sizing: border-box;
+}
+
+.site-header {
+  --header-blue: #{$primary-blue};
+  --header-gray: #{$primary-gray};
+  --header-text: #{$secondary-gray};
+  --header-border: #f0f0f0;
+  --header-search-bg: #f6f5f2;
+  --header-highlight: #3019b2;
+
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--header-border);
+  color: var(--header-text);
+  font-family: "Inter", var(--sans);
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
