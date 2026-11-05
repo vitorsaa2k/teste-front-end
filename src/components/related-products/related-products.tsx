@@ -15,7 +15,11 @@ const TABS = [
   "VER TODOS",
 ] as const;
 
-export function RelatedProducts() {
+export function RelatedProducts({
+  shouldShowNav,
+}: {
+  shouldShowNav?: boolean;
+}) {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -76,14 +80,19 @@ export function RelatedProducts() {
             Produtos relacionados
           </h2>
         </div>
-
-        <ul className="product-tabs">
-          {TABS.map((tab, index) => (
-            <li key={tab} className={index === 0 ? "active" : undefined}>
-              {tab}
-            </li>
-          ))}
-        </ul>
+        {shouldShowNav ? (
+          <ul className="product-tabs">
+            {TABS.map((tab, index) => (
+              <li key={tab} className={index === 0 ? "active" : undefined}>
+                {tab}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div className="see-all-button-container">
+            <button className="see-all-button">Ver tudo</button>
+          </div>
+        )}
 
         <div className="carousel-container">
           {hasProducts && (

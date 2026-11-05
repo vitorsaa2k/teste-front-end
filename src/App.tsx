@@ -11,8 +11,9 @@ function App() {
       <Header />
       <Hero />
       <Categories />
-      <RelatedProducts />
+      <RelatedProducts shouldShowNav />
       <Banners />
+      <RelatedProducts />
     </main>
   );
 }
