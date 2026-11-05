@@ -4,6 +4,7 @@ import { Brands } from "./components/brands/brands";
 import { Categories } from "./components/categories/categories";
 import { Header } from "./components/header/header";
 import { Hero } from "./components/hero/hero";
+import { Newsletter } from "./components/newsletter/newsletter";
 import { RelatedProducts } from "./components/related-products/related-products";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Banners />
       <Brands />
       <RelatedProducts />
+      <Newsletter />
     </main>
   );
 }
