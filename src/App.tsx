@@ -14,6 +14,7 @@ function App() {
       <RelatedProducts shouldShowNav />
       <Banners />
       <RelatedProducts />
+      <Banners />
     </main>
   );
 }
