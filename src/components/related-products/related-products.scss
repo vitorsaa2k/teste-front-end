@@ -12,6 +12,25 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 20px;
+
+    @media (max-width: 1024px) {
+      .product-tabs {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .product-tabs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 448px) {
+      .product-tabs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   }
 
   .section-title-wrapper {
