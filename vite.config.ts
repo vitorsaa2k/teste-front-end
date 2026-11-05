@@ -3,6 +3,15 @@ import babel from "@rolldown/plugin-babel";
 import { defineConfig } from "vite";
 import path from "path";
 
+const productsProxy = {
+  "/api/products": {
+    target: "https://app.econverse.com.br",
+    changeOrigin: true,
+    rewrite: () =>
+      "/teste-front-end/junior/tecnologia/lista-produtos/produtos.json",
+  },
+};
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
@@ -17,5 +26,11 @@ export default defineConfig({
         additionalData: `@use '@/styles/variables' as *;`,
       },
     },
+  },
+  server: {
+    proxy: productsProxy,
+  },
+  preview: {
+    proxy: productsProxy,
   },
 });
