@@ -16,17 +16,17 @@ export function HeaderNav() {
         <ul className="nav-list">
           {categories.map((category) => (
             <li key={category}>
-              <a href="#">{category}</a>
+              <a href="#">{category.toUpperCase()}</a>
             </li>
           ))}
           <li>
             <a href="#" className="highlight">
-              Ofertas do dia
+              OFERTAS DO DIA
             </a>
           </li>
           <li className="nav-item-icon">
             <CrownIcon />
-            <a href="#">Assinatura</a>
+            <a href="#">ASSINATURA</a>
           </li>
         </ul>
       </div>
