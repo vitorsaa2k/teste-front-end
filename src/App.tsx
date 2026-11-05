@@ -2,6 +2,7 @@ import "./App.scss";
 import { Banners } from "./components/banners/banners";
 import { Brands } from "./components/brands/brands";
 import { Categories } from "./components/categories/categories";
+import { Footer } from "./components/footer/footer";
 import { Header } from "./components/header/header";
 import { Hero } from "./components/hero/hero";
 import { Newsletter } from "./components/newsletter/newsletter";
@@ -20,6 +21,7 @@ function App() {
       <Brands />
       <RelatedProducts />
       <Newsletter />
+      <Footer />
     </main>
   );
 }
