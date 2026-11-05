@@ -17,6 +17,7 @@ function App() {
       <RelatedProducts />
       <Banners />
       <Brands />
+      <RelatedProducts />
     </main>
   );
 }
