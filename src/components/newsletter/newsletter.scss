@@ -1,0 +1,104 @@
+#section-newsletter,
+#section-newsletter *,
+#section-newsletter *::before,
+#section-newsletter *::after {
+  box-sizing: border-box;
+}
+
+#section-newsletter {
+  background-color: $secondary-purple;
+  color: #ffffff;
+  padding: 40px 0;
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .newsletter-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .newsletter-text {
+    max-width: 515px;
+
+    h2 {
+      font-size: 32px;
+      font-weight: 600;
+      margin: 0 0 10px;
+    }
+
+    p {
+      font-size: 14px;
+      margin: 0;
+      line-height: 1.4;
+      font-weight: 300;
+    }
+  }
+
+  .newsletter-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 10px;
+
+    input[type="text"],
+    input[type="email"] {
+      padding: 12px 24px;
+      border-radius: 8px;
+      border: 1px solid #e7e7e7;
+      outline: none;
+      font-size: 14px;
+      color: #676767;
+      width: 233px;
+    }
+
+    .btn-secondary {
+      background-color: $primary-yellow;
+      color: #161615;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 32px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      display: inline-block;
+      transition: background-color 0.3s;
+      margin: 0;
+
+      &:hover {
+        background-color: #e0b60f;
+      }
+    }
+  }
+
+  .newsletter-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 1024px) {
+    .newsletter-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .newsletter-form {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
