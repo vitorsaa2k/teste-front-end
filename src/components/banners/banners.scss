@@ -1,0 +1,28 @@
+.banners-section,
+.banners-section *,
+.banners-section *::before,
+.banners-section *::after {
+  box-sizing: border-box;
+}
+
+.banners-section {
+  padding: 40px 0;
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .banners-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 768px) {
+    .banners-grid {
+      flex-direction: column;
+    }
+  }
+}

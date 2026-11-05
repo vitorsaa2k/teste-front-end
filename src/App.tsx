@@ -1,4 +1,5 @@
 import "./App.scss";
+import { Banners } from "./components/banners/banners";
 import { Categories } from "./components/categories/categories";
 import { Header } from "./components/header/header";
 import { Hero } from "./components/hero/hero";
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <Categories />
       <RelatedProducts />
+      <Banners />
     </main>
   );
 }
