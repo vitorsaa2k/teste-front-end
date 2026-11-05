@@ -65,6 +65,18 @@
     }
   }
 
+  .see-all-button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .see-all-button {
+    all: unset;
+    color: $primary-black;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
   .carousel-container {
     position: relative;
     display: flex;
