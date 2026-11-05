@@ -39,11 +39,13 @@
     background: transparent;
     outline: none;
     font-size: 14px;
+    font-weight: 500;
     color: var(--header-gray);
 
     &::placeholder {
       color: var(--header-gray);
       opacity: 1;
+      font-family: "Poppins";
     }
   }
 

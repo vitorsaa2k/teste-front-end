@@ -59,6 +59,11 @@
       font-size: 14px;
       color: #676767;
       width: 233px;
+      align-self: auto;
+
+      &::placeholder {
+        font-family: "Poppins";
+      }
     }
 
     .btn-secondary {
