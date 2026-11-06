@@ -1,3 +1,40 @@
+# Instruções para compilar, testar e rodar o projeto
+
+Segue instruções para rodar o projeto e poder testar o mesmo. Por enquanto existem duas formas de rodar.
+
+## Docker
+Existem dois profiles dentro do docker-compose: `dev` e `preview` (**Recomendo usar o profile de preview**)
+
+### Preview
+Nesse profile o vite vai pre-compilar o projeto e levantar um servidor para você poder acessar ele. (Recomendo caso não vá fazer nenhuma modificação no código) 
+
+Para rodar nesse profile utilize o comando: 
+
+```bash
+docker compose --profile preview up --build
+```
+
+### Dev
+Utilize esse profile caso vá fazer modificações no código e queira que live-reload funcione
+
+Para rodar nesse profile utilize o comando:
+```bash
+docker compose --profile dev up --build
+```
+
+## Localmente
+Caso não queira utilizar o docker e simplesmente executar os comandos para rodar o projeto, use os conhecidos:
+
+```bash
+npm run preview
+```
+ou 
+```bash
+npm run dev
+```
+
+
+
 # Teste Econverse: Vaga Desenvolvedor Front-End
 
 ### Vem ser #Econverse!
