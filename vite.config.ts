@@ -29,6 +29,9 @@ export default defineConfig({
   },
   server: {
     proxy: productsProxy,
+    watch: {
+      usePolling: true,
+    },
   },
   preview: {
     proxy: productsProxy,
