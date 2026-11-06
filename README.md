@@ -13,6 +13,7 @@ Para rodar nesse profile utilize o comando:
 ```bash
 docker compose --profile preview up --build
 ```
+Depois que o container estiver rodando acesse: `http://localhost:4173`
 
 ### Dev
 Utilize esse profile caso vá fazer modificações no código e queira que live-reload funcione
@@ -21,6 +22,7 @@ Para rodar nesse profile utilize o comando:
 ```bash
 docker compose --profile dev up --build
 ```
+Depois que o container estiver rodando acesse: `http://localhost:5173`
 
 ## Localmente
 Caso não queira utilizar o docker e simplesmente executar os comandos para rodar o projeto, use os conhecidos:
@@ -28,10 +30,13 @@ Caso não queira utilizar o docker e simplesmente executar os comandos para roda
 ```bash
 npm run preview
 ```
+acesse: `http://localhost:4173`
+
 ou 
 ```bash
 npm run dev
 ```
+acesse: `http://localhost:5173`
 
 
 
