@@ -18,7 +18,20 @@
   flex-shrink: 0;
 }
 
+.product-card-open {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
 .product-card-img-wrapper {
+  display: block;
   width: 100%;
   aspect-ratio: 1;
   overflow: hidden;
@@ -34,6 +47,7 @@
 }
 
 .product-card-desc {
+  display: block;
   font-size: 15px;
   color: $secondary-gray;
   margin: 0;

@@ -17,8 +17,10 @@ const TABS = [
 
 export function RelatedProducts({
   shouldShowNav,
+  onProductSelect,
 }: {
   shouldShowNav?: boolean;
+  onProductSelect?: (product: Product) => void;
 }) {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
@@ -130,6 +132,7 @@ export function RelatedProducts({
                 <ProductCard
                   key={`${product.productName}-${index}`}
                   product={product}
+                  onSelect={onProductSelect}
                 />
               ))}
             </div>
