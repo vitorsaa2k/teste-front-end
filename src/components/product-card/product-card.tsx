@@ -8,19 +8,25 @@ const priceFormatter = new Intl.NumberFormat("pt-BR", {
 
 type ProductCardProps = {
   product: Product;
+  onSelect?: (product: Product) => void;
 };
 
-export function ProductCard({ product }: ProductCardProps) {
+export function ProductCard({ product, onSelect }: ProductCardProps) {
   return (
     <article className="product-card">
-      <div>
-        <div className="product-card-img-wrapper">
+      <button
+        type="button"
+        className="product-card-open"
+        onClick={() => onSelect?.(product)}
+        aria-label={`Ver ${product.productName || product.descriptionShort}`}
+      >
+        <span className="product-card-img-wrapper">
           <img src={product.photo} alt={product.productName} />
-        </div>
-        <p className="product-card-desc">
+        </span>
+        <span className="product-card-desc">
           {product.productName || product.descriptionShort}
-        </p>
-      </div>
+        </span>
+      </button>
       <div className="price-container">
         <p className="product-card-old-price">R$ 30,90</p>
         <p className="product-card-price">

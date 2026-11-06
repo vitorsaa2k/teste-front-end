@@ -1,0 +1,237 @@
+.modal-overlay,
+.modal-overlay *,
+.modal-overlay *::before,
+.modal-overlay *::after {
+  box-sizing: border-box;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
+
+.modal {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  max-width: 1153px;
+  min-height: 445px;
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 6px;
+  color: $secondary-gray;
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 2;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .modal-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 30px;
+
+    img {
+      width: 247px;
+      object-fit: contain;
+    }
+  }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+
+    padding: 88px 100px 54px 10px;
+  }
+
+  .modal-title {
+    margin: 0 0 16px;
+    color: $secondary-gray;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .modal-price {
+    color: $secondary-gray;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+  }
+
+  .modal-description {
+    margin-top: 43px;
+
+    p {
+      margin: 0;
+      color: $primary-gray;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: 5%;
+    }
+  }
+
+  .modal-details {
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    margin-top: 8px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: $primary-blue;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 5%;
+    cursor: pointer;
+  }
+
+  .modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 45px;
+  }
+
+  .modal-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 165px;
+    height: 54px;
+    flex-shrink: 0;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+
+    button {
+      all: unset;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 100%;
+      cursor: pointer;
+
+      &:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+      }
+    }
+
+    span {
+      color: $secondary-purple;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  .modal-buy {
+    all: unset;
+    flex: 1;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+    min-width: 150px;
+    border-radius: 6px;
+    background: $primary-yellow;
+    color: $secondary-purple;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: #f2bd00;
+    }
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: 40% 60%;
+
+    .modal-content {
+      padding: 75px 35px 40px 10px;
+    }
+
+    .modal-title {
+      white-space: normal;
+    }
+
+    .modal-actions {
+      gap: 10px;
+    }
+
+    .modal-quantity {
+      width: 130px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+
+    .modal-close {
+      top: 12px;
+      right: 18px;
+    }
+
+    .modal-image {
+      padding: 45px 20px 10px;
+
+      img {
+        width: 170px;
+        height: 220px;
+      }
+    }
+
+    .modal-content {
+      padding: 20px 24px 30px;
+    }
+
+    .modal-title {
+      font-size: 22px;
+    }
+
+    .modal-price {
+      font-size: 26px;
+    }
+
+    .modal-description {
+      margin-top: 25px;
+    }
+
+    .modal-actions {
+      margin-top: 30px;
+    }
+
+    .modal-buy {
+      font-size: 16px;
+    }
+  }
+}
