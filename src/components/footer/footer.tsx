@@ -25,7 +25,7 @@ const FOOTER_COLUMNS = [
 
 export function Footer() {
   return (
-    <section id="section-footer">
+    <footer id="section-footer">
       <div className="container footer-inner">
         <div className="footer-brand">
           <div className="logo-container">
@@ -65,6 +65,6 @@ export function Footer() {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
